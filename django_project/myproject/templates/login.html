@@ -1,190 +1,73 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UniStay – Find Your Perfect Hostel Near BMSCE</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Login</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Welcome Back</h2>
+                <p>Login to your account</p>
+            </div>
 
-  <!-- Header -->
-  <header class="header">
-    <nav class="navbar">
-      <div class="logo">
-        <h5>BMSCE</h5>
-        <h1>UniStay</h1>
-      </div>
-      <div class="nav-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <button class="btn primary">Sign In</button>
-      </div>
-    </nav>
-  </header>
+            <form id="loginForm">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <input type="text" id="username" required>
+                        <label for="username">Username</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <span class="error-message">Invalid username</span>
+                </div>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h2>Find Your Perfect Hostel Near BMSCE</h2>
-      <p>
-        Easy booking, verified accommodations, and hassle-free living for BMSCE students.
-        Your home away from home starts here.
-      </p>
-      <div class="hero-buttons">
-        <button class="btn hero-btn">🔍 Search Hostels</button>
-        <button class="btn outline">Learn More</button>
-      </div>
-    </div>
-  </section>
+                <div class="form-group password-wrapper">
+                    <div class="input-wrapper">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                        <span class="focus-border"></span>
+                        <button type="button" class="password-toggle">
+                            <span class="eye-icon"></span>
+                        </button>
+                    </div>
+                    <span class="error-message">Invalid password</span>
+                </div>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="section-title">
-      <h2>Why Choose UniStay?</h2>
-      <p>We make hostel booking simple, secure, and student-friendly</p>
-    </div>
+                <div class="form-options">
+                    <label class="remember-wrapper">
+                        <input type="checkbox" id="remember">
+                        <span class="checkbox-label">Remember Me<span class="checkmark"></span></span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
 
-    <div class="features-grid">
-      <div class="card">
-        <div class="icon-box">🛡️</div>
-        <h3>Verified Hostels</h3>
-        <p>All hostels are personally verified for safety, cleanliness, and quality standards.</p>
-      </div>
+                <button type="submit" class="btn login-btn">
+                    <span class="btn-text">Login</span>
+                    <span class="btn-loader"></span>
+                </button>
 
-      <div class="card">
-        <div class="icon-box">⏰</div>
-        <h3>Instant Booking</h3>
-        <p>Book your hostel in minutes with our streamlined, hassle-free booking process.</p>
-      </div>
+                <div class="divider"><span>or continue with</span></div>
 
-      <div class="card">
-        <div class="icon-box">📍</div>
-        <h3>Near Campus</h3>
-        <p>All hostels are located within easy reach of BMSCE campus for your convenience.</p>
-      </div>
-    </div>
-  </section>
+                <div class="social-login">
+                    <button type="button" class="social-btn google-btn">
+                        <span class="social-icon google-icon"></span>Google
+                    </button>
+                    <button type="button" class="social-btn github-btn">
+                        <span class="social-icon github-icon"></span>GitHub
+                    </button>
+                </div>
 
-  <!-- How It Works -->
-  <section class="how-it-works">
-    <div class="section-title">
-      <h2>How It Works</h2>
-      <p>Three simple steps to find your perfect accommodation</p>
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <div class="circle">1</div>
-        <h3>Search</h3>
-        <p>Browse available hostels with detailed photos and amenities.</p>
-      </div>
-      <div class="step">
-        <div class="circle accent">2</div>
-        <h3>Compare</h3>
-        <p>Compare prices, locations, and reviews from fellow students.</p>
-      </div>
-      <div class="step">
-        <div class="circle">3</div>
-        <h3>Book</h3>
-        <p>Secure your spot with instant confirmation and easy payment.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section class="benefits">
-    <div class="benefit-text">
-      <h2>Made for BMSCE Students</h2>
-      <br>
-      <div class="benefit-point">
-        <span class="check">✔</span>
-        <div>
-          <h3>Student-Friendly Pricing</h3>
-          <p>Affordable options that fit your budget without compromising on quality.</p>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                </div>
+            </form>
         </div>
-      </div>
-
-      <div class="benefit-point">
-        <span class="check">✔</span>
-        <div>
-          <h3>24/7 Support</h3>
-          <p>Always here to help with any questions or concerns about your booking.</p>
-        </div>
-      </div>
-
-      <div class="benefit-point">
-        <span class="check">✔</span>
-        <div>
-          <h3>Flexible Terms</h3>
-          <p>Semester-based and monthly options to suit your academic schedule.</p>
-        </div>
-      </div>
-
-      <div class="benefit-point">
-        <span class="check">✔</span>
-        <div>
-          <h3>Community Reviews</h3>
-          <p>Real feedback from BMSCE students who've stayed there.</p>
-        </div>
-      </div>
     </div>
 
-    <div class="benefit-stats">
-      <div class="stats-card">
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Happy Students</div>
-        <div class="stat-number accent">50+</div>
-        <div class="stat-label">Verified Hostels</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Ready to Find Your Home?</h2>
-    <p>Join hundreds of BMSCE students who've found their perfect accommodation through UniStay.</p>
-    <button class="btn cta-btn">🔍 Start Your Search</button>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-grid">
-      <div>
-        <h3>UniStay</h3>
-        <p>Making hostel booking easy for BMSCE students.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Search Hostels</a></li>
-          <li><a href="#">List Your Hostel</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Terms of Service</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>BMSCE Campus</li>
-          <li>Bangalore, India</li>
-          <li>support@unistay.com</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 UniStay. All rights reserved.</p>
-    </div>
-  </footer>
-
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
