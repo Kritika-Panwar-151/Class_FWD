@@ -1,73 +1,67 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glass Login</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HostelGo | BMSCE</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
 </head>
+
 <body>
-    <div class="login-container">
-        <div class="login-card">
-            <div class="login-header">
-                <h2>Welcome Back</h2>
-                <p>Login to your account</p>
-            </div>
-
-            <form id="loginForm">
-                <div class="form-group">
-                    <div class="input-wrapper">
-                        <input type="text" id="username" required>
-                        <label for="username">Username</label>
-                        <span class="focus-border"></span>
-                    </div>
-                    <span class="error-message">Invalid username</span>
-                </div>
-
-                <div class="form-group password-wrapper">
-                    <div class="input-wrapper">
-                        <input type="password" id="password" required>
-                        <label for="password">Password</label>
-                        <span class="focus-border"></span>
-                        <button type="button" class="password-toggle">
-                            <span class="eye-icon"></span>
-                        </button>
-                    </div>
-                    <span class="error-message">Invalid password</span>
-                </div>
-
-                <div class="form-options">
-                    <label class="remember-wrapper">
-                        <input type="checkbox" id="remember">
-                        <span class="checkbox-label">Remember Me<span class="checkmark"></span></span>
-                    </label>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
-                </div>
-
-                <button type="submit" class="btn login-btn">
-                    <span class="btn-text">Login</span>
-                    <span class="btn-loader"></span>
-                </button>
-
-                <div class="divider"><span>or continue with</span></div>
-
-                <div class="social-login">
-                    <button type="button" class="social-btn google-btn">
-                        <span class="social-icon google-icon"></span>Google
-                    </button>
-                    <button type="button" class="social-btn github-btn">
-                        <span class="social-icon github-icon"></span>GitHub
-                    </button>
-                </div>
-
-                <div class="signup-link">
-                    <p>Don't have an account? <a href="#">Sign Up</a></p>
-                </div>
-            </form>
-        </div>
+  <div class="wrapper">
+    <!-- LEFT INFO SECTION -->
+    <div class="left">
+      <h2>HostelGo</h2>
+      <h1>BMS College of Engineering</h1>
+      <p>
+        <strong>HostelGo</strong> is a smart hostel management system designed for
+        BMSCE students. Manage your hostel room, check notices, and stay updated — all in one place.
+      </p>
     </div>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <!-- RIGHT SECTION -->
+    <div class="right">
+      <div class="auth-container" id="authBox">
+        <div class="forms">
+          <!-- LOGIN FORM -->
+          <form class="login-form">
+            <h3>Login</h3>
+            <p>Welcome back! Access your HostelGo dashboard.</p>
+            <div class="input-box">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Login</button>
+            <div class="toggle" id="goSignup">
+              Don’t have an account? <span>Scroll down to Sign up</span>
+            </div>
+          </form>
+
+          <!-- SIGNUP FORM -->
+          <form class="signup-form">
+            <h3>Sign Up</h3>
+            <p>Create your HostelGo account and get started.</p>
+            <div class="input-box">
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="input-box">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Create Account</button>
+            <div class="toggle" id="goLogin">
+              Already have an account? <span>Scroll up to Login</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/js/scripts.js"></script>
 </body>
 </html>

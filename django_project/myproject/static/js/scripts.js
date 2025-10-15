@@ -1,38 +1,23 @@
-// script.js
+const authBox = document.getElementById("authBox");
+const goSignup = document.getElementById("goSignup");
+const goLogin = document.getElementById("goLogin");
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Password toggle
-    const toggleBtn = document.querySelector(".password-toggle");
-    const passwordInput = document.getElementById("password");
-    const eyeIcon = toggleBtn.querySelector(".eye-icon");
+// Click toggles
+goSignup.addEventListener("click", () => {
+  authBox.classList.add("signup-mode");
+});
 
-    toggleBtn.addEventListener("click", () => {
-        if (passwordInput.type === "password") {
-            passwordInput.type = "text";
-            eyeIcon.classList.add("show-password");
-        } else {
-            passwordInput.type = "password";
-            eyeIcon.classList.remove("show-password");
-        }
-    });
+goLogin.addEventListener("click", () => {
+  authBox.classList.remove("signup-mode");
+});
 
-    // Login form submit simulation
-    const loginForm = document.getElementById("loginForm");
-    const loginBtn = document.querySelector(".login-btn");
-    const btnText = loginBtn.querySelector(".btn-text");
-    const btnLoader = loginBtn.querySelector(".btn-loader");
-
-    loginForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Show loading
-        loginBtn.classList.add("loading");
-
-        setTimeout(() => {
-            loginBtn.classList.remove("loading");
-
-            // Here you can do actual Django login post
-            alert("Login successful (simulation)!");
-        }, 1500);
-    });
+// Mouse scroll to switch forms
+window.addEventListener("wheel", (event) => {
+  if (event.deltaY > 0) {
+    // Scroll down → show Sign Up
+    authBox.classList.add("signup-mode");
+  } else if (event.deltaY < 0) {
+    // Scroll up → show Login
+    authBox.classList.remove("signup-mode");
+  }
 });
