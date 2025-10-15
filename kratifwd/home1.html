@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HostelGo | Choose Hostel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2b2d42, #4a4e69, #6c63ff);
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .box {
+      flex: 1 1 300px;
+      background: #ffffff;
+      color: #333;
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #6c63ff, #5146d6);
+      transition: all 0.4s ease;
+      z-index: 0;
+    }
+
+    .box:hover::before {
+      left: 0;
+    }
+
+    .box:hover {
+      color: white;
+      transform: translateY(-10px);
+    }
+
+    .box h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .box p {
+      font-size: 1rem;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .box {
+        padding: 40px 25px;
+      }
+
+      .box h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to HostelGo</h1>
+  <div class="container">
+    <div class="box" onclick="window.location.href='girls.html'">
+      <h2>Girls' Hostel</h2>
+      <p>Access the portal for the Girls’ Hostel — manage rooms, view notices, and more.</p>
+    </div>
+    <div class="box" onclick="window.location.href='boys.html'">
+      <h2>Boys' Hostel</h2>
+      <p>Access the portal for the Boys’ Hostel — manage rooms, view notices, and more.</p>
+    </div>
+  </div>
+</body>
+
+</html>
