@@ -22,6 +22,32 @@ body {
   z-index: 100;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Reuse search box style */
+.search-box {
+  background: #6c63ff;
+  color: #ffffff;
+  padding: 15px 10px;
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 400px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.search-box:hover {
+  background: #e5e5e5;
+  transform: scale(1.05);
+  border-color: #fff;
+}
 .navbar {
   max-width: 1200px;
   margin: auto;
