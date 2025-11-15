@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UniStay • Girls Hostels</title>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="girls.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="brand">
+        <i data-lucide="home" class="nav-icon"></i>
+        <h1>UniStay</h1>
+      </div>
+      <div class="nav-buttons">
+        <a href="girls.html" class="btn btn-ghost">Home</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <button class="btn btn-accent">Sign In</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner Section -->
+  <section class="intro-banner">
+    <div class="intro-content">
+      <h1>Find Your Perfect Girls Hostel Near BMSCE</h1>
+      <p>
+        Safe, comfortable, and student-friendly accommodations — all verified and trusted by BMSCE students.
+      </p>
+      <button class="btn btn-accent">
+        <i data-lucide="search"></i> Start Exploring
+      </button>
+    </div>
+  </section>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <input type="text" placeholder="Search hostels..." />
+    <select>
+      <option>Sharing Type</option>
+      <option>Single</option>
+      <option>Twin</option>
+      <option>Triple</option>
+    </select>
+    <select>
+      <option>Sort by Rating</option>
+      <option>Lowest Price</option>
+      <option>Highest Rating</option>
+    </select>
+    <button class="btn btn-accent"><i data-lucide="filter"></i> Apply</button>
+  </div>
+
+  <!-- Hostel List -->
+  <section class="grid">
+    <div class="card">
+      <img src="girls1.jpg" alt="Pink Petals PG">
+      <div class="card-body">
+        <h3>Pink Petals PG</h3>
+        <p class="muted">Basavanagudi · 0.4 km</p>
+        <p>2/3 Sharing · Meals · WiFi · AC</p>
+        <div class="price">₹10,999 / month</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="girls2.jpg" alt="Lotus Ladies Hostel">
+      <div class="card-body">
+        <h3>Lotus Ladies Hostel</h3>
+        <p class="muted">Near Gate · 0.8 km</p>
+        <p>Twin Sharing · Attached Bath · Terrace Garden</p>
+        <div class="price">₹9,990 / month</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="girls3.jpg" alt="Serene Stay">
+      <div class="card-body">
+        <h3>Serene Stay</h3>
+        <p class="muted">Srinivasa Nagar · 1.1 km</p>
+        <p>Single · Laundry · Security · WiFi</p>
+        <div class="price">₹11,499 / month</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    © 2025 UniStay • All Rights Reserved
+  </footer>
+
+  <!-- External JS -->
+  <script src="girls.js"></script>
+</body>
+</html>

@@ -55,27 +55,78 @@
     .btn-hero:hover{background:#f4f6ff}
 
     /* -------- Header -------- */
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
+    header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 40, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
 
-      background: rgba(15, 18, 40, 0.45);
-      backdrop-filter: blur(18px);
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
 
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-      height: 75px;
-      padding-top: 10px;
-    }
-    nav{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:2.0rem 0;
-    }
+.brand h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
 
-    .brand{display:flex;align-items:center;gap:.5rem}
-    .brand h1{font-size:2rem;color: whitesmoke;margin:0}
-    
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-icon {
+  height: 24px;
+  width: 24px;
+  color: var(--accent);
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.3);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
     /* -------- Sections -------- */
     section{scroll-margin-top:80px}
@@ -91,7 +142,7 @@
 }
 
 
-    .search-box {
+  .search-box {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -294,14 +345,14 @@
 
   <!-- Header -->
   <header>
-    <nav class="container">
+    <nav>
       <div class="brand">
         <img src="logo3.png" alt="UniStay" class="logo-img" />
         <h1>UniStay</h1>
       </div>
       <div style="display:flex;gap:.5rem;align-items:center">
-        <button class="btn btn-ghost" onclick="scrollToId('about')">About</button>
-        <button class="btn btn-ghost" onclick="scrollToId('contact')">Contact</button>
+        <a href="index.html" class="btn btn-ghost">Home</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
         <div class="search-box" id="headerSearchBtn">
           <i data-lucide="search"></i>
         </div>
