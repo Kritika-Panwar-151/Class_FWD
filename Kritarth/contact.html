@@ -13,6 +13,21 @@
   
   <!-- Contact Page Custom CSS -->
   <style>
+    .nav-active {
+  position: relative;
+}
+
+.nav-active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
     .contact-wrapper {
       max-width: 1100px;
       margin: 60px auto;
@@ -88,6 +103,129 @@
       height: 260px;
       border: 1px solid var(--accent);
     }
+
+    /* ==== PROFILE DROPDOWN ==== */
+
+.profile-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* You already have .profile-box styles – keep them as they are */
+
+/* Dropdown panel */
+.profile-menu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+
+  left: 50%;                /* Move anchor to middle */
+  transform: translateX(-50%) translateY(-6px);  
+  /* -50% centers it perfectly */
+
+  min-width: 230px;
+  background: rgba(9, 13, 35, 0.98);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+  padding: 0.75rem 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 150;
+}
+
+/* When dropdown opens */
+.profile-menu.is-open {
+  display: block;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);  /* Drop down cleanly */
+}
+
+
+/* Top part of the dropdown: avatar + name */
+.profile-menu-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem 0.75rem;
+}
+
+.profile-menu-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.profile-menu-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-menu-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-menu-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.profile-menu-email {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Divider line */
+.profile-menu-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0.35rem 0.85rem 0.35rem;
+}
+
+/* Buttons inside dropdown */
+.profile-menu-item {
+  width: 100%;
+  padding: 0.55rem 1rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.profile-menu-item i {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+}
+
+.profile-menu-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(2px);
+}
+
+.profile-menu-danger {
+  color: #f97373;
+}
+
+.profile-menu-danger i {
+  color: #f97373;
+}
+
+.profile-menu-danger:hover {
+  background: rgba(248, 113, 113, 0.12);
+}
   </style>
 
 </head>
@@ -106,14 +244,44 @@
 
       <!-- Nav Links -->
       <a href="index.html" class="btn btn-ghost">Home</a>
-      <a href="contact.html" class="btn btn-ghost">Contact</a>
+      <a href="contact.html" class="btn btn-ghost nav-active">Contact</a>
 
       <!-- Search Icon (same size/style as boys header buttons) -->
 
       <!-- Profile Circle (same height as buttons) -->
-      <div class="profile-box">
+      <div class="profile-wrapper">
+  <div class="profile-box" id="profileBtn">
+    <img src="profile.png" alt="User">
+  </div>
+
+  <!-- Dropdown menu -->
+  <div class="profile-menu" id="profileMenu">
+    <div class="profile-menu-header">
+      <div class="profile-menu-avatar">
         <img src="profile.png" alt="User">
       </div>
+      <div class="profile-menu-user">
+        <div class="profile-menu-name">Krish Teli</div>
+        <div class="profile-menu-email">student@bmsce.ac.in</div>
+      </div>
+    </div>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item" onclick="location.href='bookings.html'">
+      <i data-lucide="home"></i>
+      <span>My Bookings</span>
+    </button>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item profile-menu-danger" onclick="logoutUser()">
+      <i data-lucide="log-out"></i>
+      <span>Logout</span>
+    </button>
+  </div>
+</div>
+
 
     </div>
   </nav>

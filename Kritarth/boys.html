@@ -29,9 +29,39 @@
       <!-- Search Icon (same size/style as boys header buttons) -->
 
       <!-- Profile Circle (same height as buttons) -->
-      <div class="profile-box">
+      <div class="profile-wrapper">
+  <div class="profile-box" id="profileBtn">
+    <img src="profile.png" alt="User">
+  </div>
+
+  <!-- Dropdown menu -->
+  <div class="profile-menu" id="profileMenu">
+    <div class="profile-menu-header">
+      <div class="profile-menu-avatar">
         <img src="profile.png" alt="User">
       </div>
+      <div class="profile-menu-user">
+        <div class="profile-menu-name">Krish Teli</div>
+        <div class="profile-menu-email">student@bmsce.ac.in</div>
+      </div>
+    </div>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item" onclick="location.href='bookings.html'">
+      <i data-lucide="home"></i>
+      <span>My Bookings</span>
+    </button>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item profile-menu-danger" onclick="logoutUser()">
+      <i data-lucide="log-out"></i>
+      <span>Logout</span>
+    </button>
+  </div>
+</div>
+
 
     </div>
   </nav>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HostelGo | BMSCE</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- LEFT INFO SECTION -->
+    <div class="left">
+      <h2>HostelGo</h2>
+      <h1>BMS College of Engineering</h1>
+      <p>
+        <strong>HostelGo</strong> is a smart hostel management system designed for
+        BMSCE students. Manage your hostel room, check notices, and stay updated — all in one place.
+      </p>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right">
+      <div class="auth-container" id="authBox">
+        <div class="forms">
+          <!-- LOGIN FORM -->
+          <form class="login-form">
+            <h3>Login</h3>
+            <p>Welcome back! Access your HostelGo dashboard.</p>
+            <div class="input-box">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit" >Login</button>
+            <div class="toggle" id="goSignup">
+              Don’t have an account? <span>Scroll down to Sign up</span>
+            </div>
+          </form>
+
+          <!-- SIGNUP FORM -->
+          <form class="signup-form">
+            <h3>Sign Up</h3>
+            <p>Create your HostelGo account and get started.</p>
+            <div class="input-box">
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="input-box">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Create Account</button>
+            <div class="toggle" id="goLogin">
+              Already have an account? <span>Scroll up to Login</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

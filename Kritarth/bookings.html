@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniStay • My Bookings</title>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bookings.css" />
+</head>
+
+<body>
+
+  <!-- HEADER (same as home page) -->
+  <header>
+    <nav>
+      <div class="brand">
+        <i data-lucide="home" class="nav-icon"></i>
+        <h1>UniStay</h1>
+      </div>
+
+      <div class="nav-buttons">
+        <a href="index.html" class="btn btn-ghost">Home</a>
+        <a href="contact.html" class="btn btn-ghost">Contact</a>
+
+        <!-- Profile Dropdown -->
+        <div class="profile-wrapper">
+          <div class="profile-box" id="profileBtn">
+            <img src="profile.png" alt="User">
+          </div>
+
+          <div class="profile-menu" id="profileMenu">
+            <div class="profile-menu-header">
+              <div class="profile-menu-avatar">
+                <img src="profile.png" alt="User">
+              </div>
+              <div class="profile-menu-user">
+                <div class="profile-menu-name">Krish Teli</div>
+                <div class="profile-menu-email">student@bmsce.ac.in</div>
+              </div>
+            </div>
+
+            <div class="profile-menu-divider"></div>
+
+            <button class="profile-menu-item" onclick="location.href='bookings.html'">
+              <i data-lucide="home"></i>
+              <span>My Bookings</span>
+            </button>
+
+            <div class="profile-menu-divider"></div>
+
+            <button class="profile-menu-item profile-menu-danger" onclick="logoutUser()">
+              <i data-lucide="log-out"></i>
+              <span>Logout</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN BOOKINGS SECTION -->
+  <section class="bookings-section">
+    <h2 class="bookings-title">Your Bookings</h2>
+
+    <div class="bookings-container">
+
+      <!-- Booking Card 1 -->
+      <div class="booking-card">
+        <img src="boys1.jpg" class="booking-image" alt="Hostel">
+
+        <div class="booking-content">
+          <h3>Blue Haven PG</h3>
+          <p class="location">Basavanagudi · 0.5 km</p>
+
+          <div class="details">
+            <span>Room Type: Twin Sharing</span>
+            <span>Price: ₹9,999/month</span>
+          </div>
+
+          <div class="status confirmed">Confirmed</div>
+        </div>
+      </div>
+
+      <!-- Booking Card 2 -->
+      <div class="booking-card">
+        <img src="boys2.jpg" class="booking-image" alt="Hostel">
+
+        <div class="booking-content">
+          <h3>Skyline Men’s Hostel</h3>
+          <p class="location">Near Campus · 0.8 km</p>
+
+          <div class="details">
+            <span>Room Type: Single</span>
+            <span>Price: ₹12,000/month</span>
+          </div>
+
+          <div class="status pending">Pending</div>
+        </div>
+      </div>
+
+      <!-- Booking Card 3 -->
+      <div class="booking-card">
+        <img src="boys3.jpg" class="booking-image" alt="Hostel">
+
+        <div class="booking-content">
+          <h3>Metro PG</h3>
+          <p class="location">Jayanagar · 1.2 km</p>
+
+          <div class="details">
+            <span>Room Type: 2/3 Sharing</span>
+            <span>Price: ₹8,499/month</span>
+          </div>
+
+          <div class="status completed">Completed</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
+
+</body>
+</html>

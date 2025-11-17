@@ -17,21 +17,52 @@
   <header>
   <nav>
     <div class="brand">
-      <i data-lucide="home" class="nav-icon"></i>
+      <i data-lucide="home" class="nav-icon active-bg"></i>
       <h1>UniStay</h1>
     </div>
 
     <div class="nav-buttons">
 
       <!-- Nav Links -->
-      <a href="index.html" class="btn btn-ghost">Home</a>
+      <a href="index.html" class="btn btn-ghost nav-active">Home</a>
+
       <a href="contact.html" class="btn btn-ghost">Contact</a>
 
 
       <!-- Profile Circle (same height as buttons) -->
-      <div class="profile-box">
+      <div class="profile-wrapper">
+  <div class="profile-box" id="profileBtn">
+    <img src="profile.png" alt="User">
+  </div>
+
+  <!-- Dropdown menu -->
+  <div class="profile-menu" id="profileMenu">
+    <div class="profile-menu-header">
+      <div class="profile-menu-avatar">
         <img src="profile.png" alt="User">
       </div>
+      <div class="profile-menu-user">
+        <div class="profile-menu-name">Krish Teli</div>
+        <div class="profile-menu-email">student@bmsce.ac.in</div>
+      </div>
+    </div>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item" onclick="location.href='bookings.html'">
+      <i data-lucide="home"></i>
+      <span>My Bookings</span>
+    </button>
+
+    <div class="profile-menu-divider"></div>
+
+    <button class="profile-menu-item profile-menu-danger" onclick="logoutUser()">
+      <i data-lucide="log-out"></i>
+      <span>Logout</span>
+    </button>
+  </div>
+</div>
+
 
     </div>
   </nav>
@@ -63,12 +94,12 @@
 
     <!-- Girls Hostel -->
       <div class="hostel-choice-card girls-card" onclick="location.href='girls.html'">
-        <h3 class="hostel-choice-title">Girls Hostel</h3>
+        <h3 class="hostel-choice-title">Girl's Hostel</h3>
       </div>
 
     <!-- Boys Hostel -->
       <div class="hostel-choice-card boys-card" onclick="location.href='boys.html'" >
-        <h3 class="hostel-choice-title">Boys Hostel</h3>
+        <h3 class="hostel-choice-title">Boy's Hostel</h3>
       </div>
 
     </div>
